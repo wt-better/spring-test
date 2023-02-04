@@ -1,5 +1,6 @@
 package com.alipay.spring.test.aop;
 
+import com.alipay.spring.test.aop.base.service.AService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -13,8 +14,8 @@ public class Main {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(
             MainConfig.class);
 
-        //AService bean = annotationConfigApplicationContext.getBean(AService.class);
-        //System.out.println(bean.getName());
+        AService bean = annotationConfigApplicationContext.getBean(AService.class);
+        System.out.println(bean.getName());
 
         annotationConfigApplicationContext.close();
     }
